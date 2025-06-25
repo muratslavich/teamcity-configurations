@@ -15,7 +15,7 @@ import jetbrains.buildServer.configs.kotlin.*
  *     └── DevOpsInfrastructure: Infrastructure and monitoring projects
  */
 
-version = "2024.07"
+version = "2025.03"
 
 // Root project configuration
 project(_Self)
