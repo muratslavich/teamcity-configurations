@@ -49,10 +49,16 @@ project {
         }
     }
 
+    subProject(TestBusiness)
     subProject(AIChatter)
 }
 
 
 object AIChatter : Project({
     name = "AIChatter"
+})
+
+
+object TestBusiness : Project({
+    name = "TestBusiness"
 })
