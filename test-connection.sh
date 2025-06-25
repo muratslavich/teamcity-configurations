@@ -28,7 +28,7 @@ echo ""
 # Test 1: Server status
 echo "1️⃣ Testing server connectivity..."
 response=$(curl -s -w "%{http_code}" -o /dev/null "$TEAMCITY_URL/app/rest/server" \
-    -H "Authorization: Bearer $ADMIN_TOKEN" \
+    -H "Authorization: Basic $(echo -n ":$ADMIN_TOKEN" | base64)" \
     -H "Accept: application/json" \
     --insecure)
 
@@ -44,7 +44,7 @@ fi
 echo ""
 echo "2️⃣ Fetching current projects..."
 curl -s "$TEAMCITY_URL/app/rest/projects" \
-    -H "Authorization: Bearer $ADMIN_TOKEN" \
+    -H "Authorization: Basic $(echo -n ":$ADMIN_TOKEN" | base64)" \
     -H "Accept: application/json" \
     --insecure | jq -r '.project[]? | "  - \(.name) (ID: \(.id))"' 2>/dev/null || echo "  (jq not available - raw response)"
 
@@ -52,7 +52,7 @@ curl -s "$TEAMCITY_URL/app/rest/projects" \
 echo ""
 echo "3️⃣ Checking versioned settings status..."
 curl -s "$TEAMCITY_URL/app/rest/projects/id:_Root/projectFeatures" \
-    -H "Authorization: Bearer $ADMIN_TOKEN" \
+    -H "Authorization: Basic $(echo -n ":$ADMIN_TOKEN" | base64)" \
     -H "Accept: application/json" \
     --insecure | grep -q "versionedSettings" && echo "✅ Versioned settings feature exists" || echo "⚠️  No versioned settings configured yet"
 
