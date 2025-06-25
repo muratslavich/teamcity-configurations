@@ -48,4 +48,11 @@ project {
             preventDependencyCleanup = false
         }
     }
+
+    subProject(AIChatter)
 }
+
+
+object AIChatter : Project({
+    name = "AIChatter"
+})
