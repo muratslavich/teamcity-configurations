@@ -68,6 +68,12 @@ out/
 secrets.yaml
 credentials.json
 
+# TeamCity sensitive files
+teamcity-token.txt
+admin-token
+super-user-token
+*.token
+
 # Local development overrides
 local-config.yaml
 dev-settings.yaml
