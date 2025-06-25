@@ -1,0 +1,74 @@
+# TeamCity Configuration Repository .gitignore
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+*.backup
+*.orig
+
+# TeamCity generated files (if any)
+.teamcity/target/
+.teamcity/.kotlintest/
+.teamcity/build/
+
+# Kotlin compilation artifacts
+*.class
+*.jar
+*.war
+*.ear
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Documentation build artifacts
+docs/_build/
+docs/.doctrees/
+
+# Test artifacts
+test-results/
+coverage/
+*.coverage
+
+# Build artifacts
+build/
+target/
+dist/
+out/
+
+# Package files
+*.tgz
+*.tar.gz
+*.zip
+
+# Security - never commit sensitive data
+*.key
+*.pem
+*.p12
+*.jks
+secrets.yaml
+credentials.json
+
+# Local development overrides
+local-config.yaml
+dev-settings.yaml
+override.properties
