@@ -2,6 +2,22 @@
 
 This repository contains TeamCity Configuration as Code using Kotlin DSL for automated project management and build configurations.
 
+## 🚀 Quick Start
+
+### Sync Configuration & Monitor Logs
+```bash
+# 1. Setup authentication
+./get-token.sh super          # Extract super user token from server
+
+# 2. Trigger sync and watch logs
+./sync-and-watch.sh          # Full sync with log monitoring
+
+# 3. Validate configuration
+./validate-teamcity.sh       # Check project structure
+```
+
+For detailed instructions, see [SYNC_GUIDE.md](SYNC_GUIDE.md).
+
 ## 🏗️ Project Structure
 
 ```

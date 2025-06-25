@@ -1,0 +1,20 @@
+# Maven build artifacts
+target/
+.maven/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Kotlin compilation cache
+.kotlin/
+
+# TeamCity generated files
+.teamcity-kotlin-dsl-temp/
+
+# OS files
+.DS_Store
+Thumbs.db

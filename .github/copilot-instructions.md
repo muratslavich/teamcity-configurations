@@ -1,5 +1,15 @@
 # TeamCity Configuration Repository - Copilot Instructions
 
+use python for scripts and automation tasks
+use kotlin for TeamCity DSL configurations
+
+use https://teamcity.devinfra.ru/app/dsl-documentation/index.html as reference for TeamCity Kotlin DSL
+use https://teamcity.devinfra.ru/app/rest/swagger.json as reference for TeamCity REST API
+The TeamCity version is 2025.03.3
+use basic authentication with a super user token for API calls
+
+use command `ssh node5 "sudo docker logs --tail 200 teamcity_teamcity_1"` to check TeamCity server logs
+
 <!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
 
 ## Project Context
